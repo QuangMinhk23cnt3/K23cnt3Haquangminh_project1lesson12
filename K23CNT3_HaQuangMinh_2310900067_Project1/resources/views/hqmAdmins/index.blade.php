@@ -3,7 +3,7 @@
 
 @section('content-body')
     <div class="container">
-        <div class="row">
+        <div class="row border">
             <h1>THONG KE HE THONG</h1>
         </div>
     </div>

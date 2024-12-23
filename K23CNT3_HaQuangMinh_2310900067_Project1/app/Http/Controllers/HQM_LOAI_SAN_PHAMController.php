@@ -16,11 +16,17 @@ class HQM_LOAI_SAN_PHAMController extends Controller
 
     public function hqmCreate()
     {
-        return view('hqmAdmins.hqmLoaiSanPham.hqm-create');
+        return view('hqmadmins.hqmloaisanpham.hqm-create');
     }
 
     public function hqmCreateSubmit(Request $request)
     {
+        $validationDate = $request->validate([
+            'hqmMaLoai'=>'required|unique:hqm_loai_san_pham',
+            'hqmTenLoai'=>'required',
+
+        ]);
+
         // ghi dữ liệu xuống DB
         $hqmLoaiSanPham = new HQM_LOAI_SAN_PHAM;
         $hqmLoaiSanPham->hqmMaLoai = $request->hqmMaLoai;
@@ -42,6 +48,12 @@ class HQM_LOAI_SAN_PHAMController extends Controller
     // Post: nkpEditSubmit
     public function hqmEditSubmit(Request $request)
     {
+        $validationDate = $request->validate([
+            'hqmMaLoai'=>'required',
+            'hqmTenLoai'=>'required',
+
+        ]);
+
         // ghi de du lieu xuong db
         $hqmLoaiSanPham = HQM_LOAI_SAN_PHAM::find($request->id);
 

@@ -31,8 +31,8 @@ Route::get('/hqm-admins',function(){
 #list
 Route::get('/hqm-admins/hqm-loai-san-pham',[HQM_LOAI_SAN_PHAMController::class,'hqmList'])->name('hqmAdmins.hqmLoaiSanPham');
 #create
-Route::get('/hqm-admins/hqm-loai-san-pham/hqm-create',[HQM_LOAI_SAN_PHAMController::class,'hqmCreate'])->name('hqmAdmins.hqmLoaiSanPham.hqmCreate');
-Route::post('/hqm-admins/hqm-loai-san-pham/hqm-create',[HQM_LOAI_SAN_PHAMController::class,'hqmCreateSubmit'])->name('hqmAdmins.hqmLoaiSanPham.nkpCreateSubmit');
+Route::get('/hqm-admins/hqm-loai-san-pham/hqm-create',[HQM_LOAI_SAN_PHAMController::class,'hqmCreate'])->name('hqmadmins.hqmloaisanpham.hqmcreate');
+Route::post('/hqm-admins/hqm-loai-san-pham/hqm-create',[HQM_LOAI_SAN_PHAMController::class,'hqmCreateSubmit'])->name('hqmadmins.hqmloaisanpham.hqmcreatesubmit');
 
 #edit
 Route::get('/hqm-admins/hqm-loai-san-pham/hqm-edit/{id}',[HQM_LOAI_SAN_PHAMController::class,'hqmEdit'])->name('hqmadmins.hqmloaisanpham.hqmedit');

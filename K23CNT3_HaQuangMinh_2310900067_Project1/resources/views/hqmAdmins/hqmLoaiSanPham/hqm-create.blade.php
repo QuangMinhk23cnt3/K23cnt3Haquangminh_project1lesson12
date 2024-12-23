@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col">
             <form action="{{route('hqmadmins.hqmloaisanpham.hqmcreatesubmit')}}" method="post">
-                
+                @csrf
                 <div class="card">
                 <div class="card-header">
                     <h2>Thêm mới loại sản phẩm</h2>
@@ -21,14 +21,22 @@
                         <label for="hqmMaLoai" class="col-sm-2 col-form-label">Mã loại</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control"
+                            value="{{old('hqmMaLoai')}}"
                             id="hqmMaLoai" name="hqmMaLoai" />
+                        @error('hqmMaLoai')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="hqmTenLoai" class="col-sm-2 col-form-label">Tên loại</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control"
-                            id="hqmTenLoai" name="hqmTenLoai" />
+                            value="{{old('hqmTenLoai')}}"
+                            id="hqmTenLoai" name="hqmTenLoai"/>
+                        @error('hqmTenLoai')
+                             <span class="text-danger">{{$message}}</span>
+                        @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
