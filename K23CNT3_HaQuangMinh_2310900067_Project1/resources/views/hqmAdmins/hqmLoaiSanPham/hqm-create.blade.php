@@ -54,7 +54,7 @@
 
                 <div class="card-footer">
                     <button class="btn btn-success">Ghi lại</button>
-                    <a href="{{route('hqmadmins.hqmloaisanpham')}}" class="btn btn-secondary">Quay lại</a>
+                    <a href="{{route('hqmAdmins.hqmLoaiSanPham')}}" class="btn btn-secondary">Quay lại</a>
                 </div>
                 </div>
             </form>

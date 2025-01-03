@@ -35,7 +35,7 @@ class HQM_LOAI_SAN_PHAMController extends Controller
 
         $hqmLoaiSanPham->save();
 
-        return redirect()->route('hqmadmins.hqmloaisanpham');
+        return redirect()->route('hqmAdmins.hqmLoaiSanPham');
     }
 
     // edit 
@@ -63,13 +63,13 @@ class HQM_LOAI_SAN_PHAMController extends Controller
 
         $hqmLoaiSanPham->save();
 
-        return redirect()->route('hqmadmins.hqmloaisanpham');
+        return redirect()->route('hqmAdmins.hqmLoaiSanPham');
     }
 
     public function hqmDelete($id)
     {
-        $hqmLoaiSanPham = HQM_LOAI_SAN_PHAM::find($request->id);
+        $hqmLoaiSanPham = HQM_LOAI_SAN_PHAM::find($id);
         $hqmLoaiSanPham->delete();
-        return redirect()->route('hqmadmins.hqmloaisanpham');
+        return redirect()->route('hqmAdmins.hqmLoaiSanPham');
     }
 }

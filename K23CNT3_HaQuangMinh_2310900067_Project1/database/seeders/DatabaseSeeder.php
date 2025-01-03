@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
             HQM_QUAN_TRITableSeeder::class,
             HQM_LOAI_SAN_PHAMTableSeeder::class,
             HQM_SAN_PHAMTableSeeder::class,
+            HQM_KHACH_HANGTableSeeder::class,
+            HQM_HOA_DONTableSeeder::class,
+            HQM_CT_HOA_DONTableSeeder::class,
         ]);
     }
 }
