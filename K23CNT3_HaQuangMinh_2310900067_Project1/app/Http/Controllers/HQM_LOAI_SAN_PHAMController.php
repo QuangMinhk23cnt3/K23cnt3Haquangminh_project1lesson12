@@ -14,6 +14,11 @@ class HQM_LOAI_SAN_PHAMController extends Controller
         return view('hqmAdmins.hqmLoaiSanPham.hqm-list',['hqmLoaiSanPhams'=>$hqmLoaiSanPhams]);
     }
 
+    public function hqmDetail($id)
+    {
+        $hqmLoaiSanPham = HQM_LOAI_SAN_PHAM::where('id', $id)->first();
+        return view('hqmAdmins.hqmLoaiSanPham.hqm-detail',['hqmLoaiSanPham'=>$hqmLoaiSanPham]);
+    }
     public function hqmCreate()
     {
         return view('hqmadmins.hqmloaisanpham.hqm-create');

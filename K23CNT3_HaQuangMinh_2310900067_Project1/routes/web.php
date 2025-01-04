@@ -32,13 +32,15 @@ Route::get('/hqm-admins',function(){
 //loai_san_pham
 #list
 Route::get('/hqm-admins/hqm-loai-san-pham',[HQM_LOAI_SAN_PHAMController::class,'hqmList'])->name('hqmAdmins.hqmLoaiSanPham');
+#detail
+Route::get('/hqmadmins/hqm-loai-san-pham/hqm-detail/{id}',[HQM_LOAI_SAN_PHAMController::class,'hqmDetail'])->name('hqmadmins.hqmloaisanpham.hqmdetail');
 #create
 Route::get('/hqm-admins/hqm-loai-san-pham/hqm-create',[HQM_LOAI_SAN_PHAMController::class,'hqmCreate'])->name('hqmadmins.hqmloaisanpham.hqmcreate');
 Route::post('/hqm-admins/hqm-loai-san-pham/hqm-create',[HQM_LOAI_SAN_PHAMController::class,'hqmCreateSubmit'])->name('hqmadmins.hqmloaisanpham.hqmcreatesubmit');
 
 #edit
-Route::get('/hqm-admins/hqm-loai-san-pham/hqm-edit/{id}',[HQM_LOAI_SAN_PHAMController::class,'hqmEdit'])->name('hqmadmins.hqmloaisanpham.hqmedit');
-Route::post('/hqm-admins/hqm-loai-san-pham/hqm-edit',[HQM_LOAI_SAN_PHAMController::class,'hqmEditSubmit'])->name('hqmadmins.hqmloaisanpham.hqmEditSubmit');
+Route::get('/hqmadmins/hqm-loai-san-pham/hqm-edit/{id}',[HQM_LOAI_SAN_PHAMController::class,'hqmEdit'])->name('hqmadmins.hqmloaisanpham.hqmedit');
+Route::post('/hqmadmins/hqm-loai-san-pham/hqm-edit',[HQM_LOAI_SAN_PHAMController::class,'hqmEditSubmit'])->name('hqmadmins.hqmloaisanpham.hqmEditSubmit');
 
 #delete
 Route::get('/hqm-admins/hqm-loai-san-pham/hqm-delete/{id}',[HQM_LOAI_SAN_PHAMController::class,'hqmDelete'])->name('hqmadmins.hqmloaisanpham.hqmdelete');
