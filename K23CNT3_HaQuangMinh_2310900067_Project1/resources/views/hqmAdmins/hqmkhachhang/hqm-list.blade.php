@@ -5,7 +5,7 @@
 @section('content-body')
     <div class="container border mt-4">
         <div class="row mb-4">
-            <div class="col-12 d-flex justify-content-between align-items-center">
+            <div class="col-12 py-3">
                 <h1>Danh Sách Khách Hàng</h1>
                 <!-- Nút Thêm Mới -->
                 <a href="/hqmadmins/hqm-khach-hang/hqm-create" class="btn btn-success btn-lg">

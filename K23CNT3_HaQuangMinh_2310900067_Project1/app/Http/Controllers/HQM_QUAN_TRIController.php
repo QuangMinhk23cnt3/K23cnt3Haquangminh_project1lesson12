@@ -70,13 +70,13 @@ class HQM_QUAN_TRIController extends Controller
         $hqmquantri->save();
 
         // Chuyển hướng về trang danh sách với thông báo thành công
-        return redirect()->route('hqmAdmins.hqmquantri')->with('success', 'Thêm quản trị viên thành công');
+        return redirect()->route('hqmadmins.hqmquantri')->with('success', 'Thêm quản trị viên thành công');
     }
 
     public function hqmDetail($id)
     {
         $hqmquantri = HQM_QUAN_TRI::where('id', $id)->first();
-        return view('hqmAdmins.hqmquantri.hqm-detail',['hqmquantri'=>$hqmquantri]);
+        return view('hqmadmins.hqmquantri.hqm-detail',['hqmquantri'=>$hqmquantri]);
 
     }
 

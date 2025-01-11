@@ -31,7 +31,10 @@
                             <td>{{$item->hqmMaSanPham}}</td>
                             <td>{{$item->hqmTenSanPham}}</td>
                             <td class="text-center" style="height: 100px;">
-                                <img src="{{ asset('storage/' . $item->hqmHinhAnh) }}" alt="Sản phẩm {{ $item->hqmMaSanPham }}" class="img-fluid" style="max-height: 80px;">
+                                <img src="{{ asset('storage/' . $item->hqmHinhAnh) }}" 
+                                alt="Sản phẩm {{ $item->hqmMaSanPham }}" 
+                                class="img-fluid" 
+                                style="max-height: 80px;">
                             </td>
                             <td>{{$item->hqmSoLuong}}</td>
                             <td>{{$item->hqmDonGia}}</td>
