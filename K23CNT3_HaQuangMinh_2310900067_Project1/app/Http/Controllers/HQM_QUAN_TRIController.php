@@ -23,7 +23,7 @@ class HQM_QUAN_TRIController extends Controller
             'hqmMatKhau' => 'required|string',
         ]);
 
-        // Tìm người dùng trong bảng vtd_QUAN_TRI
+        // Tìm người dùng trong bảng HQM_QUAN_TRI
         $user = HQM_QUAN_TRI::where('hqmTaiKhoan', $request->hqmTaiKhoan)->first();
 
         // Kiểm tra nếu người dùng tồn tại và mật khẩu đúng

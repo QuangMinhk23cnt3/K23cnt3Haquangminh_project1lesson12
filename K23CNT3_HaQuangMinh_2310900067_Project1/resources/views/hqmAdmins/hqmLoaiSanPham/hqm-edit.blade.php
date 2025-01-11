@@ -6,7 +6,7 @@
     <div class="container border">
         <div class="row">
             <div class="col">
-                <!-- Update the form action route to pass the vtdMaLoai as a parameter -->
+                <!-- Update the form action route to pass the hqmMaLoai as a parameter -->
                 <form action="{{ route('hqmadmins.hqmloaisanpham.hqmEditSubmit') }}" method="POST">
                     @csrf
                     <!-- Hidden input for the ID -->
@@ -39,10 +39,10 @@
                             <div class="mb-3">
                                 <label for="hqmTrangThai" class="form-label">Trạng Thái</label>
                                 <div class="col-sm-10">
-                                    <input type="radio" id="hqmTrangThai1" name="hqmTrangThai" value="1" {{ old('vtdTrangThai', $hqmLoaiSanPham->hqmTrangThai) == 1 ? 'checked' : '' }} />
+                                    <input type="radio" id="hqmTrangThai1" name="hqmTrangThai" value="1" {{ old('hqmTrangThai', $hqmLoaiSanPham->hqmTrangThai) == 1 ? 'checked' : '' }} />
                                     <label for="hqmTrangThai1">Khóa</label>
                                     &nbsp;
-                                    <input type="radio" id="hqmTrangThai0" name="hqmTrangThai" value="0" {{ old('vtdTrangThai', $hqmLoaiSanPham->hqmTrangThai) == 0 ? 'checked' : '' }} />
+                                    <input type="radio" id="hqmTrangThai0" name="hqmTrangThai" value="0" {{ old('hqmTrangThai', $hqmLoaiSanPham->hqmTrangThai) == 0 ? 'checked' : '' }} />
                                     <label for="hqmTrangThai0">Hiển Thị</label>
                                 </div>
                                 @error('hqmTrangThai')

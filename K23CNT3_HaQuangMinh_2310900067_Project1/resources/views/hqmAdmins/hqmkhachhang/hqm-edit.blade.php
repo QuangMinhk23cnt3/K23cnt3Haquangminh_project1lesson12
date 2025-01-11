@@ -6,7 +6,7 @@
     <div class="container border">
         <div class="row">
             <div class="col">
-                <!-- Update the form action route to pass the vtdMaKhachHang as a parameter -->
+                <!-- Update the form action route to pass the hqmMaKhachHang as a parameter -->
                 <form action="{{ route('hqmadmins.hqmkhachhang.hqmeditsubmit', ['id' => $hqmkhachhang->id]) }}" method="POST">
                     @csrf
                     <!-- Hidden input for the ID -->

@@ -37,7 +37,7 @@ class HQM_SAN_PHAMController extends Controller
             'hqmTrangThai' => 'required|in:0,1',
         ]);
     
-        // Khởi tạo đối tượng vtd_SAN_PHAM và lưu thông tin vào cơ sở dữ liệu
+        // Khởi tạo đối tượng HQM_SAN_PHAM và lưu thông tin vào cơ sở dữ liệu
         $hqmSanPham = new HQM_SAN_PHAM;
         $hqmSanPham->hqmMaSanPham = $request->hqmMaSanPham;
         $hqmSanPham->hqmTenSanPham = $request->hqmTenSanPham;
